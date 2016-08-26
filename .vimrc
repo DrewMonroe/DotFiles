@@ -5,7 +5,7 @@ set nocompatible
 filetype plugin on
 syntax on
 colorscheme brogrammer
-set colorcolumn=80
+set colorcolumn=100
 " vim tab color settings to make tabs better (and to fit in with tmux colors)
 :hi TabLineFill ctermfg=234 ctermbg=234
 :hi TabLine ctermfg=7 ctermbg=234
@@ -33,6 +33,12 @@ map <F3> :echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") . '> trans<
 ca tn tabnew
 " Use sudo to be able to save when I didn't open something as root
 ca w!! w !sudo tee %
+" Surround anything selected with the given matching quotes, brackets, etc.
+map :() xi(<Esc>pa)<Esc>
+map :'' xi'<Esc>pa'<Esc>
+map :"" xi"<Esc>pa"<Esc>
+map :[] xi[<Esc>pa]<Esc>
+map :{} xi{<Esc>pa}<Esc>
 " }}}
 
 " Searching {{{
@@ -47,9 +53,6 @@ set ignorecase
 set wildmenu
 " Always show the tab menu (and yes I really do want tabs)
 :set showtabline=-1
-" Remember how I left the file when I close it
-autocmd BufWinLeave *.* mkview
-autocmd BufWinEnter *.* silent loadview 
 " }}}
 
 " Line and spacing options {{{
