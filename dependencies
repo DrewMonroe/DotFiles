@@ -21,3 +21,4 @@ wget
 xrandr
 ffmpeg
 sysstat
+ttf-dejavu (for chrome fonts)

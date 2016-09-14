@@ -10,7 +10,7 @@ fi
 export EDITOR="/usr/bin/vim"
 export VISUAL="/usr/bin/vim"
 export SUDO_EDITOR="/usr/bin/vim"
-export TERM=xterm-256color
+export TERM=screen-256color
 
 # User specific aliases
 # Take my environment with me when I sudo

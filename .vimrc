@@ -34,11 +34,11 @@ ca tn tabnew
 " Use sudo to be able to save when I didn't open something as root
 ca w!! w !sudo tee %
 " Surround anything selected with the given matching quotes, brackets, etc.
-map :() xi(<Esc>pa)<Esc>
-map :'' xi'<Esc>pa'<Esc>
-map :"" xi"<Esc>pa"<Esc>
-map :[] xi[<Esc>pa]<Esc>
-map :{} xi{<Esc>pa}<Esc>
+map () xi(<Esc>pa)<Esc>
+map '' xi'<Esc>pa'<Esc>
+map "" xi"<Esc>pa"<Esc>
+map [] xi[<Esc>pa]<Esc>
+map {} xi{<Esc>pa}<Esc>
 " }}}
 
 " Searching {{{
@@ -46,6 +46,7 @@ map :{} xi{<Esc>pa}<Esc>
 set incsearch
 set hlsearch
 set ignorecase
+set smartcase
 " }}}
 
 " Utilities {{{
