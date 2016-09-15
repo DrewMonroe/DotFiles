@@ -33,6 +33,8 @@ alias vimrc='vim ~/.vimrc'
 alias bashrc='vim ~/.bashrc'
 # Make life slightly easier when leaving
 alias e='exit'
+# The way it should be
+alias emacs='vim'
 
 # Make a nice prompt
 force_color_prompt=yes
