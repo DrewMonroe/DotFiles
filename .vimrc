@@ -32,7 +32,7 @@ map <F3> :echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") . '> trans<
 " Use tn to create a new tab
 ca tn tabnew
 " Use sudo to be able to save when I didn't open something as root
-ca w!! w !sudo tee %
+ca w!! w !sudo tee > /dev/null %
 " Surround anything selected with the given matching quotes, brackets, etc.
 map () xi(<Esc>pa)<Esc>
 map '' xi'<Esc>pa'<Esc>
