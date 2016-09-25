@@ -5,7 +5,6 @@ ttf-inconsolata
 xfontsel
 ttf-input
 unzip
-amixer
 pulseaudio-alsa
 alsa-utils
 lxappearance
@@ -18,7 +17,9 @@ dbus
 python-dbus
 upower
 wget
-xrandr
+xorg-xrandr
 ffmpeg
 sysstat
 ttf-dejavu (for chrome fonts)
+feh
+light

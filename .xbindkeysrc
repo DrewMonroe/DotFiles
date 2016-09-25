@@ -65,9 +65,9 @@
 #"rxvt"
 #  Control + b:2 + Release
 
-"xbacklight -dec 10"
+"light -U 10"
   shift+F6
-"xbacklight -inc 10"
+"light -A 10"
   shift+F7
 "amixer -D pulse sset Master 5%+"
   shift+F10
