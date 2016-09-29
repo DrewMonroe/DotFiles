@@ -6,7 +6,7 @@ syn keyword pythonDefinition def class nextgroup=pythonFunction skipwhite
 syn match pythonFunction "\%(\%(def\s\|class\s\|@\)\s*\)\@<=\h\%(\w\|\.\)*" contained nextgroup=pythonVars
 " Make python funciton variables be highlighted
 syn region pythonVars start="(" end=")" contained contains=pythonParameters transparent keepend
-syn match pythonParameters "[^,]*" contained skipwhite
+syn match pythonParameters "[^(,.)]*" contained skipwhite
 " Highlight self
 syn keyword pythonSelf self
 syn keyword Boolean True
