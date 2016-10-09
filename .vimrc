@@ -1,11 +1,15 @@
 set nocompatible
 
+" Pathogen setup {{{
+execute pathogen#infect()
+" }}}
+
 " Color scheme customizations {{{
 " One color scheme to rule them all!
 filetype plugin on
 syntax on
 colorscheme brogrammer
-set colorcolumn=100
+set colorcolumn=80
 " vim tab color settings to make tabs better (and to fit in with tmux colors)
 :hi TabLineFill ctermfg=234 ctermbg=234
 :hi TabLine ctermfg=7 ctermbg=234
