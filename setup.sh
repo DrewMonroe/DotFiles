@@ -11,9 +11,11 @@ ln -s $PWD/.vimrc ~/.vimrc
 mkdir -p ~/.vim/after/syntax/
 rm ~/.vim/after/syntax/c.vim
 rm ~/.vim/after/syntax/python.vim
+mkdir -p ~/.vim/after/syntax
 ln -s $PWD/.vim/after/syntax/c.vim ~/.vim/after/syntax/c.vim
 ln -s $PWD/.vim/after/syntax/python.vim ~/.vim/after/syntax/python.vim
 # Set up brogrammer theme
+mkdir -p ~/.vim/colors
 rm ~/.vim/colors/brogrammer.vim
 ln -s $PWD/.vim/colors/brogrammer.vim ~/.vim/colors/brogrammer.vim
 # Install pathogen
