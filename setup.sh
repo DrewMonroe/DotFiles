@@ -7,8 +7,15 @@ rm ~/.vimrc
 
 # Get vim all set up
 ln -s $PWD/.vimrc ~/.vimrc
-rm ~/.vim
-ln -s $PWD/.vim ~/.vim
+# Set up syntax files
+mkdir -p ~/.vim/after/syntax/
+rm ~/.vim/after/syntax/c.vim
+rm ~/.vim/after/syntax/python.vim
+ln -s $PWD/.vim/after/syntax/c.vim ~/.vim/after/syntax/c.vim
+ln -s $PWD/.vim/after/syntax/python.vim ~/.vim/after/syntax/python.vim
+# Set up brogrammer theme
+rm ~/.vim/colors/brogrammer.vim
+ln -s $PWD/.vim/colors/brogrammer.vim ~/.vim/colors/brogrammer.vim
 # Install pathogen
 mkdir -p ~/.vim/autoload ~/.vim/bundle && \
 curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
