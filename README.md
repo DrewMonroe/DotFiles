@@ -16,7 +16,7 @@ bash customization files. NOTE: running this script will remove any of the
 files that I will symlink to my files, so please backup anything that you
 may want before running.
 
-To run the script, simply call it from the command line
+To run the script, simply call it from the command line from this directory
 ```bash
 ./setup
 ```
