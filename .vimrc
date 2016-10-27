@@ -1,7 +1,10 @@
 set nocompatible
 
-" Pathogen setup {{{
+" Pathogen setup and plugins{{{
 execute pathogen#infect()
+" For YouCompleteMe, to hide the Scratch window when I complete something
+autocmd CompleteDone * pclose
+let g:ycm_global_ycm_extra_conf = '/home/drew/.vim/bundle/YouCompleteMe/.ycm_extra_conf.py'
 " }}}
 
 " Color scheme customizations {{{

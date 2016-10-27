@@ -35,6 +35,8 @@ alias bashrc='vim ~/.bashrc'
 alias e='exit'
 # The way it should be
 alias emacs='vim'
+# Clear alias since tmux uses ctrl+l
+alias c='clear'
 
 # Make a nice prompt
 force_color_prompt=yes
