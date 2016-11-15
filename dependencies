@@ -23,3 +23,5 @@ sysstat
 ttf-dejavu (for chrome fonts)
 feh
 light
+compton
+rofi
