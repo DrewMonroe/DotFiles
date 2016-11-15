@@ -10,3 +10,4 @@ rofi.line-margin: 0
 rofi.font: Inconsolata 15
 rofi.padding: 4
 rofi.terminal: termite
+rofi.separator-style: solid
