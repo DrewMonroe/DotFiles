@@ -182,3 +182,4 @@ bar {
 exec_always feh --bg-scale /home/drew/arch-mountains.png
 bindsym Mod1+x exec "lock"
 bindsym Mod1+Shift+s exec "systemctl poweroff"
+bindsym Mod1+g exec "termite -e hangups"
