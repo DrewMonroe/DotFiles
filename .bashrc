@@ -13,8 +13,6 @@ export SUDO_EDITOR="/usr/bin/vim"
 export TERM=screen-256color
 
 # User specific aliases
-# Take my environment with me when I sudo
-alias sudo="sudo -E"
 # Make sure that ls will display colors of files and such
 alias ls='ls --color=auto'
 # Not all systems have ll
