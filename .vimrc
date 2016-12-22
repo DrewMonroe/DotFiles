@@ -4,7 +4,6 @@ set nocompatible
 execute pathogen#infect()
 " For YouCompleteMe, to hide the Scratch window when I complete something
 autocmd CompleteDone * pclose
-let g:ycm_global_ycm_extra_conf = '/home/drew/.vim/bundle/YouCompleteMe/.ycm_extra_conf.py'
 " }}}
 
 " Color scheme customizations {{{
@@ -12,7 +11,10 @@ let g:ycm_global_ycm_extra_conf = '/home/drew/.vim/bundle/YouCompleteMe/.ycm_ext
 filetype plugin on
 syntax on
 colorscheme brogrammer
+" visual indicator for 80 character limit
 set colorcolumn=80
+" Highlight the entire line my cursor is on
+:set cursorline
 " vim tab color settings to make tabs better (and to fit in with tmux colors)
 :hi TabLineFill ctermfg=234 ctermbg=234
 :hi TabLine ctermfg=7 ctermbg=234
@@ -30,6 +32,8 @@ autocmd BufWinLeave * call clearmatches()
 " So that I can move between the extremely long SQL (and other) strings that I write
 nnoremap j gj
 nnoremap k gk
+vnoremap j gj
+vnoremap k gk
 " Use space for folding
 nnoremap <space> za
 " Remap jk to escape
@@ -46,6 +50,11 @@ map '' xi'<Esc>pa'<Esc>
 map "" xi"<Esc>pa"<Esc>
 map [] xi[<Esc>pa]<Esc>
 map {} xi{<Esc>pa}<Esc>
+
+" Use control + space to do autocompletion in insert mode
+inoremap <Nul> <C-p>
+" Use control + space to do spelling suggestions in normal mode
+nnoremap <Nul> z=
 " }}}
 
 " Searching {{{
@@ -61,6 +70,8 @@ set smartcase
 set wildmenu
 " Always show the tab menu (and yes I really do want tabs)
 :set showtabline=-1
+" Enable spell checking
+:set spell
 " }}}
 
 " Line and spacing options {{{
@@ -69,10 +80,6 @@ set expandtab
 set tabstop=4
 set shiftwidth=4
 set autoindent
-" Highlight the entire line my cursor is on
-:set cursorline
-" Highlight 80 character line limit
-:set colorcolumn=80
 " }}}
 
 " Enable Folding {{{
