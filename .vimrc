@@ -4,6 +4,7 @@ set nocompatible
 execute pathogen#infect()
 " For YouCompleteMe, to hide the Scratch window when I complete something
 autocmd CompleteDone * pclose
+let g:ycm_global_ycm_extra_conf = '~/.vim/.ycm_extra_conf.py'
 " }}}
 
 " Color scheme customizations {{{
@@ -17,7 +18,7 @@ set colorcolumn=80
 :set cursorline
 " vim tab color settings to make tabs better (and to fit in with tmux colors)
 :hi TabLineFill ctermfg=234 ctermbg=234
-:hi TabLine ctermfg=7 ctermbg=234
+:hi TabLine ctermfg=7 ctermbg=236 cterm=NONE
 :hi TabLineSel ctermfg=7 ctermbg=32
 " Highlight trailing whitespace
 highlight ExtraWhitespace ctermbg=red guibg=red
@@ -29,6 +30,8 @@ autocmd BufWinLeave * call clearmatches()
 " }}}
 
 " Key Remappings{{{
+" Remap the leader key to comma
+let mapleader=","
 " So that I can move between the extremely long SQL (and other) strings that I write
 nnoremap j gj
 nnoremap k gk
@@ -38,12 +41,15 @@ vnoremap k gk
 nnoremap <space> za
 " Remap jk to escape
 inoremap jk <Esc>
+inoremap kj <Esc>
 " So I can tell why a word is highlighted a particular color
 map <F3> :echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") . '> trans<' . synIDattr(synID(line("."),col("."),0),"name") . "> lo<" . synIDattr(synIDtrans(synID(line("."),col("."),1)),"name") . ">" . " FG:" . synIDattr(synIDtrans(synID(line("."),col("."),1)),"fg#")<CR>
 " Use tn to create a new tab
 ca tn tabnew
 " Use sudo to be able to save when I didn't open something as root
 ca w!! w !sudo tee > /dev/null %
+" Allow fix to be a shortcut to the YCM FixIt command, and then hide the menu
+nnoremap <leader>f :YcmCompleter FixIt<CR>:only<CR>
 " Surround anything selected with the given matching quotes, brackets, etc.
 map () xi(<Esc>pa)<Esc>
 map '' xi'<Esc>pa'<Esc>
@@ -70,8 +76,7 @@ set smartcase
 set wildmenu
 " Always show the tab menu (and yes I really do want tabs)
 :set showtabline=-1
-" Enable spell checking
-:set spell
+set showcmd
 " }}}
 
 " Line and spacing options {{{
