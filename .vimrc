@@ -41,7 +41,6 @@ vnoremap k gk
 nnoremap <space> za
 " Remap jk to escape
 inoremap jk <Esc>
-inoremap kj <Esc>
 " So I can tell why a word is highlighted a particular color
 map <F3> :echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") . '> trans<' . synIDattr(synID(line("."),col("."),0),"name") . "> lo<" . synIDattr(synIDtrans(synID(line("."),col("."),1)),"name") . ">" . " FG:" . synIDattr(synIDtrans(synID(line("."),col("."),1)),"fg#")<CR>
 " Use tn to create a new tab
