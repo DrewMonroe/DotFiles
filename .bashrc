@@ -13,6 +13,8 @@ export SUDO_EDITOR="/usr/bin/vim"
 export TERM=screen-256color
 
 # User specific aliases
+# Allow me to open multiple files at once in an inuitive way
+alias vim="vim -p"
 # Make sure that ls will display colors of files and such
 alias ls='ls --color=auto'
 # Not all systems have ll
@@ -38,7 +40,7 @@ alias c='clear'
 
 # Make a nice prompt
 force_color_prompt=yes
-export PS1="\[\033[38;5;27m\]\u\[$(tput sgr0)\]\[\033[38;5;1m\]@\h\[$(tput sgr0)\]\[\033[38;5;2m\]\w \\$\[$(tput sgr0)\]\[\033[38;5;15m\] \[$(tput sgr0)\]"
+export PS1="\[\033[38;5;27m\]\u\[$(tput sgr0)\]\[\033[38;5;1m\]@\h\[$(tput sgr0)\]\[\033[38;5;2m\]\w\[$(tput sgr0)\]\[\033[38;5;15m\] \[$(tput sgr0)\]\[\033[38;5;2m\]\\$\[$(tput sgr0)\]\[\033[38;5;15m\] \[$(tput sgr0)\]"
 # Set the promptcommand to be nothing, as it casuses PS1 to be printed twice on some systems
 export PROMPT_COMMAND=""
 # Have GPG key password prompts be on the commandline
