@@ -37,6 +37,16 @@ alias e='exit'
 alias emacs='vim'
 # Clear alias since tmux uses ctrl+l
 alias c='clear'
+# Git aliases
+alias ga='git add'
+alias gc='git commit'
+alias gs='git status'
+alias gl='git log --decorate --abbrev-commit --graph'
+alias gd='git diff'
+alias gco='git checkout'
+alias gcob='git checkout -b'
+alias grm='git rm'
+alias gmv='git mv'
 
 # Make a nice prompt
 force_color_prompt=yes
