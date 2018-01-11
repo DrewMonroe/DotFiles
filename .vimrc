@@ -43,6 +43,7 @@ nnoremap <space> za
 inoremap jk <Esc>
 " So I can tell why a word is highlighted a particular color
 map <F3> :echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") . '> trans<' . synIDattr(synID(line("."),col("."),0),"name") . "> lo<" . synIDattr(synIDtrans(synID(line("."),col("."),1)),"name") . ">" . " FG:" . synIDattr(synIDtrans(synID(line("."),col("."),1)),"fg#")<CR>
+nnoremap <silent> <F5> :let _s=@/ <Bar> :%s/\s\+$//e <Bar> :let @/=_s <Bar> :nohl <Bar> :unlet _s <CR>
 " Use tn to create a new tab
 ca tn tabnew
 " Use sudo to be able to save when I didn't open something as root
@@ -74,8 +75,10 @@ set smartcase
 " Make switching between files easy!
 set wildmenu
 " Always show the tab menu (and yes I really do want tabs)
-:set showtabline=-1
+set showtabline=-1
 set showcmd
+" Turn spelling on for certain file types
+autocmd BufRead,BufNewFile *.md,*.txt,COMMIT_EDITMSG setlocal spell
 " }}}
 
 " Line and spacing options {{{
