@@ -1,8 +1,14 @@
 set nocompatible
 
-" Pathogen setup and plugins{{{
-execute pathogen#infect()
+" Vundle setup and plugins{{{
 " For YouCompleteMe, to hide the Scratch window when I complete something
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+Plugin 'VundleVim/Vundle.vim'
+Plugin 'vim-syntastic/syntastic'
+Plugin 'airblade/vim-gitgutter'
+call vundle#end()
+
 autocmd CompleteDone * pclose
 let g:ycm_global_ycm_extra_conf = '~/.vim/.ycm_extra_conf.py'
 " }}}
