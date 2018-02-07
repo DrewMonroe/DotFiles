@@ -18,9 +18,9 @@ ln -s $PWD/.vim/after/syntax/python.vim ~/.vim/after/syntax/python.vim
 mkdir -p ~/.vim/colors
 rm ~/.vim/colors/brogrammer.vim
 ln -s $PWD/.vim/colors/brogrammer.vim ~/.vim/colors/brogrammer.vim
-# Install pathogen
-mkdir -p ~/.vim/autoload ~/.vim/bundle && \
-curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
+# Install vundle
+mkdir -p ~/.vim/bundle
+git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 
 # Set up tmux
 rm ~/.tmux.conf
